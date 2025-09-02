@@ -11,7 +11,10 @@ class AnalyzerModel:
     """
     def __init__(self, skills_csv_path: str):
         self.model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
-        self.skills = pd.read_csv(skills_csv_path)["skill"].dropna().str.lower().str.strip().unique().tolist()
+        import os
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+        skills_path = os.path.join(BASE_DIR, "skills", "skills_master.csv")
+        self.skills = pd.read_csv(skills_path)["skill"].dropna().str.lower().str.strip().unique().tolist()
 
     def extract_skills(self, text: str) -> List[str]:
         text_l = text.lower()
