@@ -49,7 +49,7 @@ pip install -r backend/requirements.txt
 ```bash
 uvicorn backend.app.main:app --reload --port 8080
 ```
-Open: [http://localhost:8080/docs](http://localhost:8080/docs)
+Open: [http://localhost:8080/docs]((http://127.0.0.1:8080/docs))
 
 ### 5. Start Streamlit App
 ```bash
