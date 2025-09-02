@@ -10,7 +10,7 @@ st.title("🧠 Smart Resume Analyzer")
 st.caption("Analyze resume vs job description. Local mode or via FastAPI API.")
 
 mode = st.radio("Mode", ["Local (no API)", "Remote API"], horizontal=True)
-api_url = st.text_input("API URL (for Remote API mode)", value="http://127.0.0.1:8080")
+api_url = st.text_input("API URL (for Remote API mode)", value="http://127.0.0.1:8080/docs")
 resume_file = st.file_uploader("Upload Resume (PDF/DOCX/TXT)", type=["pdf", "docx", "txt"])
 jd_text = st.text_area("Paste Job Description", height=200, placeholder="Paste the JD here...")
 
