@@ -8,13 +8,12 @@ import os
 
 app = FastAPI(
     title="Smart Resume Analyzer API",
-    description="🚀 Backend service that analyzes resumes against job descriptions using NLP and skill-matching.",
+    description="🚀 Backend service to analyze resumes against job descriptions.",
     version="1.0",
     openapi_url="/schema.json",   # 👈 replaces /openapi.json
     docs_url="/docs",             # Swagger UI stays at /docs
-    redoc_url=None                # Disable ReDoc if not needed
+    redoc_url=None                # (optional) disable ReDoc
 )
-
 # CORS for local dev & simple frontends
 app.add_middleware(
     CORSMiddleware,
